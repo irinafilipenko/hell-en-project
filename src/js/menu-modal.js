@@ -30,4 +30,9 @@ $(document).ready(function () {
     $('.modal-window').toggleClass('animate__bounceOutRight');
     $('body').removeClass('lock');
   });
+
+  $('.nav-link').click(function (event) {
+    $('.burger-menu').removeClass('menu-open');
+    $('body').removeClass('lock');
+  });
 });
