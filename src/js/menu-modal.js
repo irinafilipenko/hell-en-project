@@ -33,6 +33,9 @@ $(document).ready(function () {
 
   $('.nav-link').click(function (event) {
     $('.burger-menu').removeClass('menu-open');
+    $('.logo').removeClass('inverse');
+    $('.menu-button-icon,.burger-menu').removeClass('menu-open');
+
     $('body').removeClass('lock');
   });
 });
