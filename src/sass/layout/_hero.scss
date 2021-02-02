@@ -74,6 +74,8 @@
   .hero-service-list {
     :last-child {
       margin-bottom: 0px;
+      animation-duration: 1500ms;
+      animation-iteration-count: 1;
     }
   }
 
