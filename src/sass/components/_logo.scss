@@ -6,6 +6,8 @@
   color: var(--primary-text-color);
   z-index: 3;
   transition: all var(--transition-function);
+  animation-duration: 1500ms;
+  animation-iteration-count: 1;
 }
 
 .burger-menu.is-open + .logo {

@@ -184,6 +184,15 @@
     background-size: auto;
   }
 
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: 1344px),
+    screen and (min-resolution: 192dpi) and (min-width: 1344px),
+    screen and (min-resolution: 2dppx) and (min-width: 1344px) {
+    .hero-wave-box {
+      background-image: url('../images/hero/hero-desktop@2x.png');
+      background-size: 1680px;
+    }
+  }
+
   .hero-left {
     padding-top: 208px;
     display: flex;
@@ -246,14 +255,5 @@
 
   .hero-service-list-text {
     display: none;
-  }
-}
-
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1344px),
-  screen and (min-resolution: 192dpi) and (min-width: 1344px),
-  screen and (min-resolution: 2dppx) and (min-width: 1344px) {
-  .hero-wave-box {
-    background-image: url('../images/hero/hero-desktop@2x.png');
-    background-size: 1344px cover;
   }
 }

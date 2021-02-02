@@ -35,7 +35,6 @@ $(document).ready(function () {
     $('.burger-menu').removeClass('menu-open');
     $('.logo').removeClass('inverse');
     $('.menu-button-icon,.burger-menu').removeClass('menu-open');
-
     $('body').removeClass('lock');
   });
 });

@@ -31,7 +31,8 @@
   position: absolute;
   left: 0;
   top: 0;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   text-align: center;
   width: 100vw;
   height: 100vh;
@@ -39,12 +40,13 @@
   line-height: 1.8;
   letter-spacing: 0.03em;
   background-color: rgba(17, 21, 24, 0.9);
-  animation-duration: 1500ms;
-  animation-iteration-count: 1;
+  transition: all var(--transition-function);
+  overflow-y: scroll;
 
   &.menu-open {
-    display: block;
     z-index: 2;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
@@ -85,6 +87,11 @@
   margin-right: 60px;
 }
 
+.nav-link-desktop {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 // Burger button
 @media screen and (max-width: 1343px) {
   .menu-button {
@@ -93,6 +100,7 @@
     height: 40px;
     z-index: 3;
     cursor: pointer;
+    transition: all var(--transition-function);
 
     &-icon-line {
       position: absolute;

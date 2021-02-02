@@ -26,3 +26,96 @@
 .animate:focus {
   transform: scale(1.1);
 }
+
+.uptop {
+  position: fixed;
+  display: block;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  border: none;
+  background-color: rgba(255, 107, 9, 0.5);
+  border-radius: 3px;
+  bottom: 25px;
+  right: 50%;
+  transform: translateX(490%);
+  margin-right: -30px;
+  outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+  cursor: pointer;
+  z-index: 10;
+}
+.uptop:hover {
+  background-color: var(--accent-color);
+}
+
+.upview {
+  transition: opacity 0.3s ease, margin-right 0.5s ease-out;
+  margin-right: 0px;
+  opacity: 0.9;
+}
+
+.uptop::before,
+.uptop::after {
+  content: '';
+  position: absolute;
+  height: 13px;
+  width: 2px;
+  background-color: var(--primary-text-color);
+  top: 8px;
+}
+.uptop::before {
+  left: 10px;
+  transform: rotate(45deg);
+}
+.uptop::after {
+  right: 10px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .uptop {
+    height: 40px;
+    width: 40px;
+    bottom: 40px;
+    transform: translateX(900%);
+  }
+
+  .uptop::before,
+  .uptop::after {
+    height: 18px;
+    top: 10px;
+  }
+
+  .uptop::before {
+    left: 13px;
+  }
+
+  .uptop::after {
+    right: 13px;
+  }
+}
+
+@media screen and (min-width: 1344px) {
+  .uptop {
+    width: 50px;
+    height: 50px;
+    bottom: 50px;
+    transform: translateX(1315%);
+  }
+
+  .uptop::before,
+  .uptop::after {
+    height: 20px;
+    top: 15px;
+  }
+
+  .uptop::before {
+    left: 17px;
+  }
+
+  .uptop::after {
+    right: 17px;
+  }
+}
