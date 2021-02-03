@@ -45,61 +45,67 @@
   transition: opacity 0.3s ease, margin-right 0.5s ease-out;
   cursor: pointer;
   z-index: 10;
-}
-.uptop:hover {
-  background-color: var(--accent-color);
+
+  &:hover {
+    background-color: var(--accent-color);
+    opacity: 1;
+
+    &::after,
+    &::before {
+      background-color: var(--white-color);
+    }
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 2px;
+    background-color: var(--primary-text-color);
+    top: 10px;
+    transition: all var(--transition-function);
+  }
+
+  &::before {
+    left: 13px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    right: 13px;
+    transform: rotate(-45deg);
+  }
+
+  @media screen and (min-width: 768px) {
+    bottom: 50px;
+    transform: translateX(910%);
+  }
+
+  @media screen and (min-width: 1344px) {
+    width: 50px;
+    height: 50px;
+    right: 35%;
+
+    &::before,
+    &::after {
+      height: 20px;
+      top: 15px;
+    }
+
+    &::before {
+      left: 17px;
+    }
+
+    &::after {
+      right: 17px;
+    }
+  }
 }
 
 .upview {
   transition: opacity 0.3s ease, margin-right 0.5s ease-out,
     background-color var(--transition-function);
   margin-right: 0px;
-  opacity: 0.9;
-}
-
-.uptop::before,
-.uptop::after {
-  content: '';
-  position: absolute;
-  height: 18px;
-  width: 2px;
-  background-color: var(--primary-text-color);
-  top: 10px;
-}
-.uptop::before {
-  left: 13px;
-  transform: rotate(45deg);
-}
-.uptop::after {
-  right: 13px;
-  transform: rotate(-45deg);
-}
-
-@media screen and (min-width: 768px) {
-  .uptop {
-    bottom: 50px;
-    transform: translateX(910%);
-  }
-}
-
-@media screen and (min-width: 1344px) {
-  .uptop {
-    width: 50px;
-    height: 50px;
-    right: 35%;
-  }
-
-  .uptop::before,
-  .uptop::after {
-    height: 20px;
-    top: 15px;
-  }
-
-  .uptop::before {
-    left: 17px;
-  }
-
-  .uptop::after {
-    right: 17px;
-  }
+  opacity: 0.3;
 }
